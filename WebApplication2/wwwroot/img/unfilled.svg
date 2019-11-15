@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18">
+  <g id="Group_22163" data-name="Group 22163" transform="translate(-1007.425 -178)">
+    <g id="user" transform="translate(1010.425 181)">
+      <g id="Group_47" data-name="Group 47" transform="translate(-3 3)">
+        <g id="Group_46" data-name="Group 46">
+          <path id="Path_109" data-name="Path 109" d="M10.243,7.757a5.977,5.977,0,0,0-2.28-1.43,3.469,3.469,0,1,0-3.925,0A6.009,6.009,0,0,0,0,12H.937a5.062,5.062,0,1,1,10.125,0H12A5.961,5.961,0,0,0,10.243,7.757ZM6,6A2.531,2.531,0,1,1,8.531,3.469,2.534,2.534,0,0,1,6,6Z" transform="translate(0)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+    <g id="user-2" data-name="user" transform="translate(1014.425 178)">
+      <g id="Group_47-2" data-name="Group 47" transform="translate(0)">
+        <g id="Group_46-2" data-name="Group 46">
+          <path id="Path_109-2" data-name="Path 109" d="M10.243,7.757a5.977,5.977,0,0,0-2.28-1.43,3.469,3.469,0,1,0-3.925,0,5.977,5.977,0,0,0-2.28,1.43c-.362.362.075.342,0,.857.638-.067-.353.647-.353,1.739h.938c0-2.791.866-3.416,3.658-3.416A5.068,5.068,0,0,1,11.062,12H12A5.961,5.961,0,0,0,10.243,7.757ZM6,6A2.531,2.531,0,1,1,8.531,3.469,2.534,2.534,0,0,1,6,6Z" transform="translate(0)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+    <path id="ic_error_outline_24px" d="M4.295,6.2h.954v.954H4.295Zm0-3.817h.954V5.249H4.295ZM4.767,0A4.772,4.772,0,1,0,9.543,4.772,4.769,4.769,0,0,0,4.767,0Zm0,8.589A3.817,3.817,0,1,1,8.589,4.772,3.816,3.816,0,0,1,4.772,8.589Z" transform="translate(1026.212 195.544) rotate(180)" fill="#fff"/>
+  </g>
+</svg>

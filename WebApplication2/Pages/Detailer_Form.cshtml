@@ -1,0 +1,184 @@
+﻿@page
+@model Detailer_FormModel
+@{
+    ViewData["Title"] = "Form page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/ieStyle.css">
+    <script src="https://kit.fontawesome.com/7066b76c62.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" rel="stylesheet">
+    <title>Detailer Form</title>
+</head>
+<body>
+
+    <!-------------------------FORM---------------------------->
+    <div class="wrapper">
+        <!-------------------------FORM BAR---------------------------->
+        <div class="form-bar">
+            <h5>detailer need form</h5>
+            <a id="instruction-button" href="#" class="instructions-button" onclick="displayInstructions()">instructions<i class="fas fa-chevron-up" id="inst-dropdown"></i></a>
+            <div class="tool-form-buttons tool-buttons">
+                <a id="close-button" class="tool-button" href="#"><img class="img-10" src="~/img/cancel.svg" alt="close-icon">close</a>
+                <a id="validate-button" class="tool-button" href="#"><img class="img-13" src="~/img/checked.svg" alt="validate-icon">validate</a>
+                <a id="save-button" class="tool-button" href="#"><img class="img-13" src="~/img/floppy.svg" alt="save-icon">save</a>
+                <a id="submit-button" class="tool-button" href="#"><img class="img-10" src="~/img/submit.svg" alt="submit-icon">submit</a>
+            </div>
+        </div>
+        <!-------------------------INSTRUCTIONS---------------------------->
+        <div class="instructions" id="f-instructions">
+            <ul>
+                <li>All fields marked ‘required’ must be completed.</li>
+                <li>Use the 'Save' button to save your changes.</li>
+                <li>Use the 'Validate' button to identify missing data in mandatory fields.</li>
+                <li>Use 'Submit' button to submit your application.</li>
+            </ul>
+        </div>
+        <!-------------------------FORM---------------------------->
+        <div class="detailer-form">
+            <form id="detailer-request-form" action="#">
+                <!-------------------------SECTION A---------------------------->
+                <h6><span>SECTION A (Basic Info)</span></h6>
+                <div class="form-section t1">
+                    <div class="form-cell">
+                        <label for="state">state<span class="required">*</span><img src="~/img/info.svg" alt="info-icon"></label>
+                        <input type="text" name="state" id="state" required disabled>
+                    </div>
+                    <div class="form-cell t2">
+                        <label for="wsm">WSM<span class="required">*</span><img src="~/img/info.svg" alt="info-icon"></label>
+                        <input type="text" name="swm" id="sws" required disabled>
+                    </div>
+                    <div class="form-cell t3">
+                        <label for="installation">
+                            installation<span class="required">*</span><img src="~/img/info.svg"
+                                                                            alt="info-icon">
+                        </label>
+                        <input type="text" name="installation" id="installation" placeholder="Enter Installation Name" required>
+                    </div>
+                    <div class="form-cell t4">
+                        <label for="requested-by">requested by<img src="~/img/info.svg" alt="info-icon"></label>
+                        <input type="text" name="requested-by" id="requested-by">
+                    </div>
+                    <div class="form-cell t5">
+                        <label for="contact-name">
+                            contact name<span class="required">*</span><img src="~/img/info.svg"
+                                                                            alt="info-icon">
+                        </label>
+                        <input type="text" name="contact-name" id="contact-name" placeholder="Enter Contact Name" required>
+                    </div>
+                    <div class="form-cell t6">
+                        <label for="phone-number">
+                            phone number<span class="required">*</span><img src="~/img/info.svg"
+                                                                            alt="info-icon">
+                        </label>
+                        <input type="text" name="phone-number" id="phone-number" placeholder="Enter Phone Number" required>
+                    </div>
+                    <div class="form-cell t7 m-bottom">
+                        <label for="email">email<span class="required">*</span><img src="~/img/info.svg" alt="info-icon"></label>
+                        <input type="text" name="email" id="email" placeholder="Enter Email Address" required>
+                    </div>
+                </div>
+                <!-------------------------SECTION B---------------------------->
+                <h6><span>SECTION B (Project Info)</span></h6>
+                <div class="form-section">
+                    <div class="full-width form-cell t1">
+                        <label for="project-name">project name<span class="required">*</span><img src="~/img/info.svg" alt="info-icon"></label>
+                        <input type="text" name="project-name" id="project-name" placeholder="Enter Project Name" required>
+                    </div>
+                    <div class="form-cell t5">
+                        <label for="how-many-detailers-required">how many detailers required<span class="required">*</span><img src="~/img/info.svg" alt="info-icon"></label>
+                        <input type="text" name="how-many-detailers-required" id="how-many-detailers-required" placeholder="Enter Number" required>
+                    </div>
+                    <div class="form-cell relative-wrapper t6">
+                        <label for="start-date">start date<span class="required">*</span><img src="~/img/info.svg" alt="info-icon"></label>
+                        <input type="date" name="start-date" id="start-date" placeholder="MM/DD/YYYY" required>
+                    </div>
+                    <div class="form-cell t7">
+                        <label for="end-date">end date <span class="required">*</span><img src="~/img/info.svg" alt="info-icon"></label>
+                        <input type="date" name="end-date" id="end-date" placeholder="MM/DD/YYYY" required>
+                    </div>
+                    <div class="form-cell t8">
+                        <label for="push-to-national-date">push to national-date<span class="required">*</span><img src="~/img/info.svg" alt="info-icon"></label>
+                        <input type="date" name="push-to-national-date" id="push-to-national-date" placeholder="MM/DD/YYYY" required disabled>
+                    </div>
+                </div>
+                <!-------------------------SECTION C---------------------------->
+                <h6><span>SECTION C (Required Positions)</span></h6>
+                <div class="form-section" id="sectionc">
+                    <div class="form-cell t1">
+                        <label for="qualification">qualification<span class="required">*</span><img src="~/img/info.svg" alt="info-icon"></label>
+                        <select id="qualification" name="qualification" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="FAL2">FAL2</option>
+                            <option value="FFT1">FFT1</option>
+                            <option value="RXB1">RXB1</option>
+                            <option value="RXB2">RXB2</option>
+                            <option value="ENGB">ENGB</option>
+                        </select>
+                    </div>
+
+                    <div class="form-cell t2 m-margin">
+                        <label class="trainee-label" for="trainee-acceptable">traine acceptable<span class="required">*</span><img src="~/img/info.svg" alt="info-icon"></label>
+                        <input class="checkbox" type="checkbox" name="trainee-acceptable" id="trainee-acceptable" required>
+                    </div>
+                    <div class="form-cell t3">
+                        <a id="add-detailer-button" class="detailer-form-add add-button" href="#"><img class="icon-botton img-13" src="~/img/add.svg" alt="add icon">add</a>
+                    </div>
+
+                    <input class="t5" type="text" name="qualification1" id="qualification1" disabled>
+                    <input class="checkbox t6 m-margin" type="checkbox" name="position-added-checkbox" id="position-added-checkbox">
+
+                    <div class="form-cell t7 cell-h">
+                        <a id="edit-detailer-button" class="edit-button" href="#">edit</a>
+                        <a id="delete-detailer-button" class="delete-button" href="#">delete</a>
+                        <!-- <a id="add-detailer-button" class="delete-button" href="#">delete</a> check during final-->
+                    </div>
+                </div>
+                <hr class="dashed-line">
+                <div class="form-section">
+                    <div class="full-width form-cell t1">
+                        <label for="description">description<span class="required">*</span><img src="~/img/info.svg" alt="info-icon"></label>
+                        <textarea name="description" id="description" placeholder="Enter Description" required></textarea>
+                    </div>
+                    <div class="full-width form-cell t5">
+                        <label for="equipment">equipment<span class="required">*</span><img src="~/img/info.svg" alt="info-icon"></label>
+                        <textarea name="equipment" id="equipment" placeholder="Enter Equipment" required></textarea>
+                    </div>
+                    <div class="full-width form-cell t9">
+                        <label for="suggested-personnel">suggested personnel<span class="required">*</span><img src="~/img/info.svg" alt="info-icon"></label>
+                        <textarea name="suggested-personnel" id="suggested-personnel" placeholder="Enter Suggested Personnel" required></textarea>
+                    </div>
+                    <div class="half-width form-cell t13">
+                        <label for="comments">comments<span class="required">*</span><img src="~/img/info.svg" alt="info-icon"></label>
+                        <textarea name="comments" id="comments" placeholder="Enter Commentst" required></textarea>
+                    </div>
+                    <div class="half-width form-cell drop-file t15">
+                        <label for="attachment">attachment<img src="~/img/info.svg" alt="info-icon"></label>
+                        <div class="files"></div>
+                        <div class="drop-zone">
+                            <img src="~/img/upload.svg" alt="upload icon">
+                            <a id="choose-file-button" href="#">Choose/ Drag files</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-------------------------FORM BAR BOTTOM---------------------------->
+        <div class="form-bar form-button">
+            <div class="tool-form-buttons tool-buttons">
+                <a id="close-button" class="tool-button" href="#"><img class="img-10" src="~/img/cancel.svg" alt="close-icon">close</a>
+                <a id="validate-button" class="tool-button" href="#"><img class="img-13" src="~/img/checked.svg" alt="validate-icon">validate</a>
+                <a id="save-button" class="tool-button" href="#"><img class="img-13" src="~/img/floppy.svg" alt="save-icon">save</a>
+                <a id="submit-button" class="tool-button" href="#"><img class="img-10" src="~/img/submit.svg" alt="submit-icon">submit</a>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

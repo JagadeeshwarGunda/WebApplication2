@@ -1,0 +1,963 @@
+﻿@page
+@model detailer_detailModel
+@{
+    ViewData["Title"] = "Detail page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/ieStyle.css">
+    <script src="https://kit.fontawesome.com/7066b76c62.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" rel="stylesheet">
+    <title>Detailer Details</title>
+</head>
+<body>
+
+    <div class="wrapper responsive-panel">
+        <div class="top-items">
+            <strong><span id="dtrnumber">Request ID: DTR-Req-1151</span></strong>
+            <span id="position-requested">Positions Required</span><p id="filled-number">0/0 </p>
+            <div class="right-buttons">
+                <!------------------------- ---------------ADD DETAILERS TAB----------------------------------------------------------------------------------->
+                <ul class="detailer-buttons">
+                    <li>
+                        <a id="add-detailers" href="#" onclick="displayPanel(this.id)">
+                            <img class="img-18" src="~/img/addDetailer.svg"
+                                 alt="add detailers icon">add detailers<i class="fas fa-chevron-down top-button-arrow"></i>
+                        </a>
+                    </li>
+                    <li>
+
+                        <div id="add-detailers-panel" class="add-detailer-tab">
+                            <!-- <div class="qualification-header">
+                                        <span title="qualification">qualification</span>
+                                        <span title="positions">positions</span>
+                                        <span title="trainee acceptable">trainee acceptable</span>
+                                    </div> -->
+
+                            <div class="qualification-requirements">
+                                <span class="panel-subheader" title="internal">internal</span>
+
+                                <i class="fas fa-chevron-up drop-down-button outter-button"></i>
+                                <!-- <span id="number-position" title="4">4</span>
+                                        <span id="trainee-required" title="no">no</span> -->
+                            </div>
+
+                            <div>
+                                <span class="add-detailer-title">Qualification:<span class="add-detailer-info-dis">FFT2</span></span>
+
+                                <span class="add-detailer-title">Trainee Aceptable:<span class="add-detailer-info-dis">No</span></span>
+
+                                <hr class="add-detailer-line">
+                            </div>
+
+                            <!----------------INTERNAL PART 1  --------------------->
+                            <div class="detailer-panel1">
+                                <!-- <span class="panel-subheader" title="internal">internal</span> -->
+                                <div class="detailer-panel internal-detailer">
+                                    <div class="detailer-cell">
+                                        <div class="form-cell">
+                                            <span id="internal1-number-header" class="detailer-number-tag" title="1">1</span>
+                                            <span class="detailer-name-tag">.name</span>
+                                        </div>
+                                        <!-- <img class="img-15" src="~/img/user-icon.svg" alt="user icon"> -->
+                                        <span id="internal1-name" class="internal-name" title="Mark Parker">Mark Parker</span>
+                                    </div>
+                                    <div class="detailer-cell">
+                                        <div class="form-cell">
+                                            <span id="internal2-number-header" class="detailer-number-tag" title="2">2</span>
+                                            <span class="detailer-name-tag">.name</span>
+                                        </div>
+                                        <!-- <img class="img-15" src="~/img/user-icon.svg" alt="user icon"> -->
+                                        <span id="internal2-name" class="internal-name" title="Mark Parker">Amber Baker</span>
+                                    </div>
+                                </div>
+
+                                <!----------------EXTERNAL PART 1  ------------------------->
+                                <div>
+                                    <hr class="add-detailer-line">
+                                    <span class="add-detailer-title">
+                                        Qualification:<span class="add-detailer-info-dis">FFT2</span>
+                                    </span>
+
+                                    <span class="add-detailer-title">
+                                        Trainee Aceptable:<span class="add-detailer-info-dis">No</span>
+                                    </span>
+
+                                    <hr class="add-detailer-line">
+                                </div>
+
+                                <div class="detailer-panel external-detailer-info-panel">
+                                    <div class="form-cell">
+                                        <span id="detailer-name" class="detailer-number-tag" title="3">3.</span>
+                                        <label for="name">
+                                            name<span class="required">*</span><img src="~/img/info.svg"
+                                                                                    alt="info-icon">
+                                        </label>
+                                        <input type="text" name="name" id="external-detailer-name" placeholder="enter name" required>
+                                    </div>
+
+                                    <div class="form-cell external-cell">
+                                        <label for="agency">agency<img class="info" src="~/img/info.svg" alt="info-icon"></label>
+                                        <input type="text" name="agency" id="external-detailer-name" placeholder="enter agency">
+                                    </div>
+                                    <div class="form-cell external-cell">
+                                        <label for="state">
+                                            state<span class="required">*</span><img src="~/img/info.svg"
+                                                                                     alt="info-icon">
+                                        </label>
+                                        <input type="text" name="state" id="external-detailer-name" placeholder="enter state" required>
+                                    </div>
+                                    <div class="form-cell external-cell">
+                                        <label for="email">
+                                            email<span class="required">*</span><img src="~/img/info.svg"
+                                                                                     alt="info-icon">
+                                        </label>
+                                        <input type="text" name="email" id="external-detailer-name" placeholder="enter email" required>
+                                    </div>
+                                    <div class="form-cell external-cell">
+                                        <label for="phone number">
+                                            phone number<span class="required">*</span><img src="~/img/info.svg"
+                                                                                            alt="info-icon">
+                                        </label>
+                                        <input type="text" name="phone-number" id="external-detailer-name" placeholder="enter number"
+                                               required>
+                                    </div>
+                                    <div class="form-cell external-cell">
+                                        <label for="phone number">qualification<img src="~/img/info.svg" alt="info-icon"></label>
+                                        <input type="text" name="phone-number" id="external-detailer-name" placeholder="enter number">
+                                    </div>
+                                    <div class="form-cell add-button-cell">
+                                        <a id="add-detailer-button" class="detailer-form-add add-button" href="#">
+                                            <img class="icon-botton img-13" src="~/img/add.svg" alt="add icon">add
+                                        </a>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <!----------------ADD DETAILER FORM--------------->
+                            <form id="add-external-detailer" action="">
+                                <div class="detailer-panel external-detailer">
+                                    <div class="form-cell">
+                                        <span id="detailer-name" class="detailer-number-tag" title="4">1.</span>
+                                        <label for="name">name<img class="info" src="~/img/info.svg" alt="info-icon"></label>
+                                        <input type="text" name="name" id="external-detailer-name" placeholder="enter name" required>
+                                    </div>
+                                    <div class="form-cell">
+                                        <span id="detailer-name" class="detailer-number-tag" title="4">2.</span>
+                                        <label for="name">name<img class="info" src="~/img/info.svg" alt="info-icon"></label>
+                                        <input type="text" name="name" id="external-detailer-name" placeholder="enter name" required>
+                                    </div>
+                                    <div class="form-cell">
+                                        <span id="detailer-name" class="detailer-number-tag" title="4">3.</span>
+                                        <label for="name">name<img class="info" src="~/img/info.svg" alt="info-icon"></label>
+                                        <input type="text" name="name" id="external-detailer-name" placeholder="enter name" required>
+                                    </div>
+                                    <div class="form-cell">
+                                        <span id="detailer-name" class="detailer-number-tag" title="4">4.</span>
+                                        <label for="name">name<img class="info" src="~/img/info.svg" alt="info-icon"></label>
+                                        <input type="text" name="name" id="external-detailer-name" placeholder="enter name" required>
+                                    </div>
+                                    <div class="form-cell add-button-cell">
+                                        <a id="add-detailer-button" class="detailer-form-add add-button" href="#">
+                                            <img class="icon-botton img-13" src="~/img/add.svg" alt="add icon">add
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-------------SECOND TABLE----------------------->
+                                <div class="qualification-requirements">
+                                    <span class="panel-subheader" title="internal">external</span>
+
+                                    <i class="fas fa-chevron-up drop-down-button outter-button"></i>
+                                </div>
+                                <!----------------INTERNAL PART 2--------------------->
+                                <div class="detailer-panel2">
+                                    <div class="detailer-panel internal-detailer">
+                                        <div class="detailer-cell">
+                                            <div class="form-cell">
+                                                <span id="internal1-number-header" class="detailer-number-tag" title="1">1</span>
+                                                <span class="detailer-name-tag">.name</span>
+                                            </div>
+                                            <span id="internal1-name" class="internal-name" title="Mark Parker">Mark Parker</span>
+                                        </div>
+                                        <div class="detailer-cell">
+                                            <div class="form-cell">
+                                                <span id="internal2-number-header" class="detailer-number-tag" title="2">2</span>
+                                                <span class="detailer-name-tag">.name</span>
+                                            </div>
+                                            <span id="internal2-name" class="internal-name" title="Mark Parker">Amber Baker</span>
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <!----------------EXTERNAL PART 2------------------------->
+                                    <div class="detailer-panel external-detailer-info-panel">
+                                        <div class="form-cell">
+                                            <span id="detailer-name" class="detailer-number-tag" title="3">3.</span>
+                                            <label for="name">
+                                                name<span class="required">*</span><img src="~/img/info.svg"
+                                                                                        alt="info-icon">
+                                            </label>
+                                            <input type="text" name="name" id="external-detailer-name" placeholder="enter name"
+                                                   required>
+                                        </div>
+
+                                        <div class="form-cell external-cell">
+                                            <label for="agency">agency<img class="info" src="~/img/info.svg" alt="info-icon"></label>
+                                            <input type="text" name="agency" id="external-detailer-name" placeholder="enter agency">
+                                        </div>
+                                        <div class="form-cell external-cell">
+                                            <label for="state">
+                                                state<span class="required">*</span><img src="~/img/info.svg"
+                                                                                         alt="info-icon">
+                                            </label>
+                                            <input type="text" name="state" id="external-detailer-name" placeholder="enter state"
+                                                   required>
+                                        </div>
+                                        <div class="form-cell external-cell">
+                                            <label for="email">
+                                                email<span class="required">*</span><img src="~/img/info.svg"
+                                                                                         alt="info-icon">
+                                            </label>
+                                            <input type="text" name="email" id="external-detailer-name" placeholder="enter email"
+                                                   required>
+                                        </div>
+                                        <div class="form-cell external-cell">
+                                            <label for="phone number">
+                                                phone number<span class="required">*</span><img src="~/img/info.svg"
+                                                                                                alt="info-icon">
+                                            </label>
+                                            <input type="text" name="phone-number" id="external-detailer-name"
+                                                   placeholder="enter number" required>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+
+
+                                <!--------------INTERNAL DETAILER------------------->
+                                <div class="detailer-panel external-detailer">
+                                    <div class="form-cell">
+                                        <span id="detailer-name" class="detailer-number-tag" title="4">1.</span>
+                                        <label for="name">name<img class="info" src="~/img/info.svg" alt="info-icon"></label>
+                                        <input type="text" name="name" id="external-detailer-name" placeholder="enter name" required>
+                                    </div>
+                                    <div class="form-cell">
+                                        <span id="detailer-name" class="detailer-number-tag" title="4">2.</span>
+                                        <label for="name">name<img class="info" src="~/img/info.svg" alt="info-icon"></label>
+                                        <input type="text" name="name" id="external-detailer-name" placeholder="enter name" required>
+                                    </div>
+                                    <div class="form-cell">
+                                        <span id="detailer-name" class="detailer-number-tag" title="4">3.</span>
+                                        <label for="name">name<img class="info" src="~/img/info.svg" alt="info-icon"></label>
+                                        <input type="text" name="name" id="external-detailer-name" placeholder="enter name" required>
+                                    </div>
+                                    <div class="form-cell">
+                                        <span id="detailer-name" class="detailer-number-tag" title="4">4.</span>
+                                        <label for="name">name<img class="info" src="~/img/info.svg" alt="info-icon"></label>
+                                        <input type="text" name="name" id="external-detailer-name" placeholder="enter name" required>
+                                    </div>
+
+
+                                </div>
+                                <div class="tool-buttons add-detailer-bottom-button">
+                                    <a class="tool-button epadding" href="#">
+                                        <img class="icon-align img-15" src="~/img/saveicon.svg"
+                                             alt="save-icon">save
+                                    </a>
+                                    <a class="tool-button cancel" href="#">
+                                        <img class="img-10" src="~/img/cancel.svg"
+                                             alt="close-icon">cancel
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+                <!--------------------------------------------------UNABLE TO FILL TAB--------------------------------------------------------------->
+                <ul class="detailer-buttons">
+                    <li>
+                        <a id="unable-to-fill" href="#" onclick="displayPanel(this.id)">
+                            <img class="img-18" src="~/img/unfilled.svg"
+                                 alt="unable to fill icon">unable to fill<i class="fas fa-chevron-down top-button-arrow"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <div id="unable-to-fill-panel" class="unable-to-fill-tab">
+                            <span>unable to fill <span id="unfilled-number">0</span> out of <span id="filled-number">0</span></span>
+                            <label for="comments">
+                                comments<span class="required">*</span><img src="~/img/info.svg"
+                                                                            alt="info-icon">
+                            </label>
+                            <textarea name="comments" id="unable-to -fill-comments" placeholder="Enter Commentst" required></textarea>
+                            <div class="tool-buttons add-detailer-bottom-button">
+                                <a class="tool-button" href="#">
+                                    <img class="icon-align img-14" src="~/img/saveicon.svg"
+                                         alt="save-icon">submit
+                                </a>
+                                <a class="tool-button cancel"><img class="img-10" src="~/img/cancel.svg" alt="close-icon">cancel</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-------------------------------------------------REQUEST CANCELLATION TAB--------------------------------------------------------------->
+                <ul class="detailer-buttons">
+                    <li>
+                        <a id="request-cancellation" href="#" onclick="displayPanel(this.id)">
+                            <img class="img-14"
+                                 src="~/img/cancellation.svg" alt="request cancellation icon">request cancellation<i class="fas fa-chevron-down top-button-arrow"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <div id="request-cancellation-panel" class="request-cancellation">
+                            <div class="m3-bottom">
+                                <label for="justification">
+                                    justification<span class="required">*</span><img src="~/img/info.svg"
+                                                                                     alt="info-icon">
+                                </label>
+                                <select id="external-detailer-state" name="state" required>
+                                    <option value="" disabled selected>Select</option>
+                                </select>
+                            </div>
+
+                            <label for="other">other <img src="~/img/info.svg" alt="info-icon"></label>
+                            <textarea name="other" id="request-cancellation-textarea"></textarea>
+                            <div class="tool-buttons add-detailer-bottom-button">
+                                <a class="tool-button" href="#">
+                                    <img class="icon-align img-14" src="~/img/floppy.svg"
+                                         alt="save-icon">submit
+                                </a>
+                                <a class="tool-button cancel" href="#">
+                                    <img class="img-10" src="~/img/cancel.svg"
+                                         alt="close-icon">cancel
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-------------------------------------------------VIEW SELECTED DETAILERS TAB--------------------------------------------------------------->
+                <ul class="detailer-buttons">
+                    <li>
+                        <a id="view-selected-detailers" href="#" onclick="displayPanel(this.id)">
+                            <img class="img-14 icon-align"
+                                 src="~/img/selectedFile.svg" alt="view selected detailers icon">view selected detailers<i class="fas fa-chevron-down top-button-arrow"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <div id="view-selected-detailers-panel" class="view-selected-detailers">
+                            <!-- <div class="qualification-header view-header">
+                                        <span title="qualification">qualification</span>
+                                        <span title="positions">positions</span>
+                                        <span title="trainee acceptable">trainee acceptable</span>
+                                    </div> -->
+                            <!-- <div class="qualification-requirements">
+                                        <span id="qualification-type" title="fft2">FFT2</span>
+                                        <span id="number-position" title="4">4</span>
+                                        <span id="trainee-required" title="no">no</span>
+                                    </div> -->
+
+
+                            <div class="qualification-requirements">
+                                <span class="panel-subheader" title="internal">internal</span>
+
+                                <i class="fas fa-chevron-up drop-down-button outter-button"></i>
+                            </div>
+                            <div>
+                                <span class="add-detailer-title">Qualification:<span class="add-detailer-info-dis">FFT2</span></span>
+
+                                <span class="add-detailer-title">Trainee Aceptable:<span class="add-detailer-info-dis">No</span></span>
+
+                                <hr class="add-detailer-line">
+                            </div>
+
+                            <div class="detailer-panel view-detailer">
+                                <div class="detailer-cell">
+                                    <div class="form-cell">
+                                        <span class="detailer-name-tag">1.name</span>
+                                    </div>
+                                    <!-- <img class="img-15" src="~/img/user-icon.svg" alt="user icon"> -->
+                                    <span id="selected1-name" class="internal-name" title="Mark Parker">Mark Parker</span>
+                                    <a class="view-selected" href="#"><i class="fas fa-chevron-down"></i></a>
+                                </div>
+                                <div class="detailer-cell detailer-into-active">
+                                    <div class="form-cell">
+                                        <span class="detailer-name-tag">2.name</span>
+                                    </div>
+                                    <!-- <img class="img-15" src="~/img/user-icon.svg" alt="user icon"> -->
+                                    <span id="selected2-name" class="internal-name" title="Mark Parker">Amber Baker</span>
+                                    <a class="view-selected" href="#"><i class="fas fa-chevron-up"></i></a>
+                                </div>
+                                <div class="detailer-cell">
+                                    <div class="form-cell">
+                                        <span class="detailer-name-tag">3.name</span>
+                                    </div>
+                                    <!-- <img class="img-15" src="~/img/user-icon.svg" alt="user icon"> -->
+                                    <span id="selected3-name" class="internal-name" title="Mark Parker">Amber Baker</span>
+                                    <a class="view-selected" href="#"><i class="fas fa-chevron-down"></i></a>
+                                    <!-- <span  class="internal-name external-tag" >external</span> -->
+                                </div>
+                                <div class="detailer-cell">
+                                    <div class="form-cell">
+                                        <span class="detailer-name-tag">4.name</span>
+                                    </div>
+                                    <!-- <img class="img-15" src="~/img/user-icon.svg" alt="user icon"> -->
+                                    <span id="selected4-name" class="internal-name" title="Mark Parker">Amber Baker</span>
+                                    <a class="view-selected" href="#"><i class="fas fa-chevron-down"></i></a>
+                                </div>
+                            </div>
+                            <div class="detailer-down-info">
+                                <div class="detailer-cell">
+                                    <span class="detailer-title">agency</span>
+                                    <span id="detailer1-agency" class="internal-name" title="Mark Parker">AFWFB</span>
+                                </div>
+                                <div class="detailer-cell">
+                                    <span class="detailer-title">WSM</span>
+                                    <span id="detailer1-agency" class="internal-name" title="Mark Parker">shan afm</span>
+                                </div>
+                                <div class="detailer-cell">
+                                    <span class="detailer-title">email</span>
+                                    <a id="detailer1-agency" href="#" class="internal-link" title="Mark Parker">Eric@blm.gov</a>
+                                </div>
+                                <div class="detailer-cell">
+                                    <span class="detailer-title">phone number</span>
+                                    <a id="detailer1-agency" href="#" class="internal-link" title="Mark Parker">(074)721-1300</a>
+                                </div>
+                            </div>
+                            <!-------------------SELECTED DETAILERS FIRST ROW---------------->
+                            <!-- <div class="qualification-requirements">
+                                        <span id="qualification-type" title="fft2">RXB1</span>
+                                        <span id="number-position" title="4">3</span>
+                                        <span id="trainee-required" title="no">no</span>
+                                    </div> -->
+                            <div class="qualification-requirements">
+                                <span class="panel-subheader" title="internal">external</span>
+
+                                <i class="fas fa-chevron-up drop-down-button outter-button"></i>
+                            </div>
+                            <div>
+                                <span class="add-detailer-title">Qualification:<span class="add-detailer-info-dis">FFT2</span></span>
+
+                                <span class="add-detailer-title">Trainee Aceptable:<span class="add-detailer-info-dis">No</span></span>
+
+                                <hr class="add-detailer-line">
+                            </div>
+                            <div class="detailer-panel view-detailer">
+                                <div class="detailer-cell">
+                                    <div class="form-cell">
+                                        <span class="detailer-name-tag">1.name</span>
+                                    </div>
+                                    <!-- <img class="img-15" src="~/img/user-icon.svg" alt="user icon"> -->
+                                    <span id="selected2-name" class="internal-name" title="Mark Parker">Amber Baker</span>
+                                    <a class="view-selected" href="#"><i class="fas fa-chevron-up"></i></a>
+                                </div>
+                                <div class="detailer-cell">
+                                    <div class="form-cell">
+                                        <span class="detailer-name-tag">2.name</span>
+                                    </div>
+                                    <!-- <img class="img-15" src="~/img/user-icon.svg" alt="user icon"> -->
+                                    <span id="selected2-name" class="internal-name" title="Mark Parker">Amber Baker</span>
+                                    <a class="view-selected" href="#"><i class="fas fa-chevron-up"></i></a>
+                                </div>
+                                <div class="detailer-cell">
+                                    <div class="form-cell">
+                                        <span class="detailer-name-tag">3.name</span>
+                                    </div>
+                                    <!-- <img class="img-15" src="~/img/user-icon.svg" alt="user icon"> -->
+                                    <span id="selected3-name" class="internal-name" title="Mark Parker">-</span>
+                                </div>
+                            </div>
+                            <div class="tool-buttons add-detailer-bottom-button">
+                                <a class="tool-button" href="#">
+                                    <img class="icon-align img-14" src="~/img/cancel.svg"
+                                         alt="save-icon">close
+                                </a>
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+
+                <!-------------------------------------------------APPROVE CANCELLATION TAB--------------------------------------------------------------->
+                <ul class="detailer-buttons">
+                    <li>
+                        <a id="approve-cancellation" href="#" onclick="displayPanel(this.id)">
+                            <img class="img-18"
+                                 src="~/img/appproved.svg" alt="approve cancellation icon">approve cancellation<i class="fas fa-chevron-down top-button-arrow"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <div id="approve-cancellation-panel" class="approve-cancellation">
+                            <label for="justification">justification</label>
+                            <div class="yellow-underline"></div>
+                            <label id="reason-of-cancellation" for="no longer needed">no longer needed</label>
+
+                            <label for="comment">comment <img src="~/img/info.svg" alt="info-icon"></label>
+                            <textarea name="other" id="comment-cancellation-textarea"></textarea>
+                            <div class="tool-buttons add-detailer-bottom-button">
+                                <a class="tool-button" href="#">
+                                    <img class="icon-align img-15" src="~/img/saveicon.svg"
+                                         alt="save-icon">submit
+                                </a>
+                                <a class="tool-button cancel"><img class="img-10" src="~/img/cancel.svg" alt="close-icon">cancel</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-------------------------------------------------APPROVE DATE TAB--------------------------------------------------------------->
+
+                <ul class="detailer-buttons">
+                    <li>
+                        <a id="approve-date" href="#" onclick="displayPanel(this.id)">
+                            <img class="img-18 icon-align"
+                                 src="~/img/calendar.svg" alt="approve date icon">approve date extension request<i class="fas fa-chevron-down top-button-arrow"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <div id="approve-date-panel" class="approve-date-tab">
+                            <div>
+                                <label for="Actual Date">Actual Date<img src="~/img/info.svg" alt="info-icon"></label>
+                                <input type="date" name="actual date" id="actual-date-input" placeholder="10/10/19" disabled>
+                            </div>
+                            <div>
+                                <label for="Extended Date">
+                                    Extended Date<span class="required">*</span><img src="~/img/info.svg"
+                                                                                     alt="info-icon">
+                                </label>
+                                <input type="date" name="extended date" id="extended-date-input" placeholder="10/10/19" required>
+                            </div>
+                            <div>
+                                <label for="comment">comment <img src="~/img/info.svg" alt="info-icon"></label>
+                                <textarea name="new-date-comment" id="new-date-textarea"></textarea>
+                            </div>
+                            <div class="tool-buttons add-detailer-bottom-button">
+                                <a class="tool-button approve-button">
+                                    <img class="img-15" src="~/img/appproved.svg"
+                                         alt="save-icon">approve
+                                </a>
+                                <a class="tool-button cancel"><img class="img-10" src="~/img/cancel.svg" alt="close-icon">cancel</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-------------------------------------------------COMPLETE TAB--------------------------------------------------------------->
+
+                <ul class="detailer-buttons">
+                    <li>
+                        <a id="complete-button" href="#" onclick="displayPanel(this.id)">
+                            <img class="img-16 icon-align"
+                                 src="~/img/filePlus.svg" alt="complete icon">complete<i class="fas fa-chevron-down top-button-arrow"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <div id="complete-button-panel" class="complete-tab">
+                            <div class="form-cell">
+                                <label for="comment">comment <img src="~/img/info.svg" alt="info-icon"></label>
+                                <textarea name="complete-comment" id="complete-textarea"></textarea>
+                            </div>
+                            <div class="tool-buttons add-detailer-bottom-button">
+                                <a class="tool-button" href="#">
+                                    <img class="icon-align img-15" src="~/img/saveicon.svg"
+                                         alt="save-icon">submit
+                                </a>
+                                <a class="tool-button cancel"><img class="img-10" src="~/img/cancel.svg" alt="close-icon">cancel</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-------------------------------------------------BACK BUTTON--------------------------------------------------------------->
+                <a id="back-button" href="#"><i class="fas fa-chevron-left"></i>back</a>
+
+            </div>
+        </div>
+        <!-------------------------PROGRESS BAR---------------------------->
+        <div class="top-progress-bar">
+            <div class="progress-status">
+                <span id="status-submitted" class="status-text" title="submitted">submitted</span>
+                <span id="status-number1" class="progress-circle status-completed" title="1">1</span>
+                <div id="status1" class="status-popup">
+                    <span title="fmo"><img src="~/img/status-group.svg" alt="group icon"> WSM Lead</span>
+                    <span title="2"><img src="~/img/status-calendar.svg" alt="calendar icon"> 09/20/2019 03:45 PM</span>
+                </div>
+            </div>
+            <div class="progress-status">
+                <span id="status-fmo" class="status-text" title="fmo">fmo</span>
+                <span id="status-number2" class="progress-circle status-completed" title="2">2</span>
+                <div id="status2" class="status-popup">
+                    <span title="fmo"><img src="~/img/status-group.svg" alt="group icon"> WSM Lead</span>
+                    <span title="2"><img src="~/img/status-calendar.svg" alt="calendar icon"> 09/20/2019 03:45 PM</span>
+                </div>
+            </div>
+            <div class="progress-status">
+                <span id="staus-liaison" class="status-text" title="liaison">liaison</span>
+                <span id="status-number3" class="progress-circle status-completed" title="3">3</span>
+                <div id="status3" class="status-popup">
+                    <span title="fmo"><img src="~/img/status-group.svg" alt="group icon"> WSM Lead</span>
+                    <span title="2"><img src="~/img/status-calendar.svg" alt="calendar icon"> 09/20/2019 03:45 PM</span>
+                </div>
+            </div>
+            <div class="progress-status">
+                <span id="staus-fmo2" class="status-text" title="fmo">fmo</span>
+                <span id="status-number4" class="progress-circle status-completed" title="4">4</span>
+                <div id="status4" class="status-popup">
+                    <span title="fmo"><img src="~/img/status-group.svg" alt="group icon"> WSM Lead</span>
+                    <span title="2"><img src="~/img/status-calendar.svg" alt="calendar icon"> 09/20/2019 03:45 PM</span>
+                </div>
+            </div>
+            <div class="progress-status">
+                <span id="staus-hq" class="status-text" title="hq">hq</span>
+                <span id="status-number5" class="progress-circle" title="5">5</span>
+                <div id="status5" class="status-popup">
+                    <span title="fmo"><img src="~/img/status-group.svg" alt="group icon"> WSM Lead</span>
+                    <span title="2"><img src="~/img/status-calendar.svg" alt="calendar icon"> 09/20/2019 03:45 PM</span>
+                </div>
+            </div>
+        </div>
+        <hr class="top-bar-line">
+        <div class="content">
+            <!-------------------------DOCUMENTS---------------------------->
+            <div class="left-side">
+                <div class="content-table">
+                    <div class="content-header">
+                        <span title="document">documents</span>
+                        <span id="document-number">(0)</span>
+                        <div class="header-buttons">
+                            <a href=""><img class="img-15 icon-ln" src="~/img/add.svg" alt="add icon"></a>
+                            <a href=""></a><img class="img-12 icon-ln" src="~/img/recycleBin.svg" alt="add icon"></a>
+                        </div>
+                    </div>
+
+                    <div class="content-wrapper">
+                        <div class="document">
+                            <input class="checkbox" type="checkbox" name="document1" id="checkbox-document1">
+                            <span id="document1" class="document-title" title="document title">fy20 rx season.docx</span>
+                            <span id="document1-submitted-date" class="document-info" title="submitted">submitted : 10/25/2019 02.35 PM</span>
+                            <span id="document1-submitted-by" class="document-info" title="submitted by">submitted by : say powers</span>
+                        </div>
+                        <div class="document">
+                            <input class="checkbox" type="checkbox" name="document1" id="checkbox-document1">
+                            <span id="document2" class="document-title" title="document title">wild land fire manual.docx</span>
+                            <span id="document2-submitted-date" class="document-info" title="submitted">submitted : 10/25/2019 02.35 PM</span>
+                            <span id="document2-submitted-by" class="document-info" title="submitted by">submitted by : say powers</span>
+                        </div>
+                        <div class="document">
+                            <input class="checkbox" type="checkbox" name="document1" id="checkbox-document1">
+                            <span id="document3" class="document-title" title="document title">detailers selected info.docx</span>
+                            <span id="document3-submitted-date" class="document-info" title="submitted">submitted : 10/25/2019 02.35 PM</span>
+                            <span id="document3-submitted-by" class="document-info" title="submitted by">submitted by : say powers</span>
+                        </div>
+                        <div class="document">
+                            <input class="checkbox" type="checkbox" name="document1" id="checkbox-document1">
+                            <span id="document4" class="document-title" title="document title">location map.pdf</span>
+                            <span id="document4-submitted-date" class="document-info" title="submitted">submitted : 10/25/2019 02.35 PM</span>
+                            <span id="document4-submitted-by" class="document-info" title="submitted by">submitted by : say powers</span>
+                        </div>
+                        <div class="document">
+                            <input class="checkbox" type="checkbox" name="document1" id="checkbox-document1">
+                            <span id="document5" class="document-title" title="document title">fy20 rx season.docx</span>
+                            <span id="document5-submitted-date" class="document-info" title="submitted">submitted : 10/25/2019 02.35 PM</span>
+                            <span id="document5-submitted-by" class="document-info" title="submitted by">submitted by : say powers</span>
+                        </div>
+                    </div>
+                </div>
+                <!-------------------------TEAM MEMBERS---------------------------->
+                <div class="content-table">
+                    <div class="content-header team-header">
+                        <span title="team members">team members</span>
+                        <span id="team-number">(0)</span>
+                        <div class="header-buttons">
+                            <a href="#" onclick="addTeamMember()"><img class="img-15 icon-ln" src="~/img/add.svg" alt="add icon"></a>
+                            <a href="#"><img class="img-12 icon-ln" src="~/img/recycleBin.svg" alt="add icon"></a>
+                        </div>
+                    </div>
+
+                    <!----------------------------------------ADD TEAM MEMBER--------------------------------------------->
+
+                    <div id="add-team-panel" class="add-team-member">
+                        <div class="form-cell">
+                            <label for="enter team member">enter team member <span class="required">*</span></label>
+                            <input type="text" name="discussion subject" placeholder="enter name of email address" required>
+                        </div>
+                        <div class="tool-buttons add-detailer-bottom-button">
+                            <a class="tool-button approve-button"><img class="img-15" src="~/img/appproved.svg" alt="save-icon">OK</a>
+                            <a class="tool-button cancel"><img class="img-10" src="~/img/cancel.svg" alt="close-icon">cancel</a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="full-content-wrapper">
+                        <div class="team-members">
+                            <span id="team-member1-icon" class="team-member-icon" title="team member icon">gj</span>
+                            <span id="team-member1-name" class="team-member-name" title="team member name">george johnson</span>
+                            <span id="team-member1-email" class="team-member-email" title="team member email"><img class="img-15" src="~/img/envelope.svg" alt="email icon">george.johnson@us.af.mil</span>
+                        </div>
+                        <div class="team-members">
+                            <span id="team-member2-icon" class="team-member-icon" title="team member icon">sg</span>
+                            <span id="team-member2-name" class="team-member-name" title="team member name">smith greene</span>
+                            <span id="team-member2-email" class="team-member-email" title="team member email"><img class="img-15" src="~/img/envelope.svg" alt="email icon">george.johnson@us.af.mil</span>
+                        </div>
+                        <div class="team-members">
+                            <span id="team-member3-icon" class="team-member-icon" title="team member icon">ba</span>
+                            <span id="team-member3-name" class="team-member-name" title="team member name">brooks anthony</span>
+                            <span id="team-member3-email" class="team-member-email" title="team member email"><img class="img-15" src="~/img/envelope.svg" alt="email icon">george.johnson@us.af.mil</span>
+                        </div>
+                        <div class="team-members">
+                            <span id="team-member4-icon" class="team-member-icon" title="team member icon">cr</span>
+                            <span id="team-member4-name" class="team-member-name" title="team member name">casillas roger</span>
+                            <span id="team-member4-email" class="team-member-email" title="team member email"><img class="img-15" src="~/img/envelope.svg" alt="email icon">george.johnson@us.af.mil</span>
+                        </div>
+                        <div class="team-members">
+                            <span id="team-member5-icon" class="team-member-icon" title="team member icon">gj</span>
+                            <span id="team-member5-name" class="team-member-name" title="team member name">george johnson</span>
+                            <span id="team-member5-email" class="team-member-email" title="team member email"><img class="img-15" src="~/img/envelope.svg" alt="email icon">george.johnson@us.af.mil</span>
+                        </div>
+                        <div class="team-members">
+                            <span id="team-member6-icon" class="team-member-icon" title="team member icon">gj</span>
+                            <span id="team-member6-name" class="team-member-name" title="team member name">george johnson</span>
+                            <span id="team-member6-email" class="team-member-email" title="team member email"><img class="img-15" src="~/img/envelope.svg" alt="email icon">george.johnson@us.af.mil</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-------------------------REQUEST DETAILS---------------------------->
+            <div class="middle">
+                <div class="content-table">
+                    <div class="content-header">
+                        <span title="requested details">request details</span>
+                        <div class="tool-buttons">
+                            <a class="tool-button" href="#"><img class="img-13" src="~/img/copy.svg" alt="copy icon">copy</a>
+                            <a class="tool-button" href="#"><img class="img-13 icon-botton" src="~/img/edit.svg" alt="edit icon">edit</a>
+                        </div>
+                    </div>
+
+                    <div class="detailer-detail-wrapper">
+                        <div class="detailer-detail">
+                            <h6><span>SECTION A (Basic Info)</span></h6>
+                            <div class="detailer-section">
+                                <div class="form-cell d1">
+                                    <span id="state-header" class="detailer-info-header" title="state">state</span>
+                                    <span id="state-info" class="detailer-info" title="south carolina">south carolina</span>
+                                </div>
+                                <div class="form-cell d2">
+                                    <span id="wsm-header" class="detailer-info-header" title="wsm">WSM</span>
+                                    <span id="wsm-info" class="detailer-info" title="Shaw AFB">Shaw AFB</span>
+                                </div>
+                                <div class="form-cell  d3">
+                                    <span id="installation-header" class="detailer-info-header" title="Installation">Installation</span>
+                                    <span id="installation-info" class="detailer-info" title="JB Charleston">JB Charleston</span>
+                                </div>
+                                <div class="form-cell  d4">
+                                    <span id="requester-header" class="detailer-info-header" title="Requested By">Requested By</span>
+                                    <span id="requester-info" class="detailer-info" title="SM Lead">WSM Lead</span>
+                                </div>
+                                <div class="form-cell  d5">
+                                    <span id="contact-header" class="detailer-info-header" title="Contact Name">Contact Name</span>
+                                    <span id="contact-info" class="detailer-info" title="Thomas Cline">Thomas Cline</span>
+                                </div>
+                                <div class="form-cell  d6">
+                                    <span id="phone-header" class="detailer-info-header" title="Phone Number">Phone Number</span>
+                                    <span id="phone-info" class="detailer-info" title="+51 9324535622">+51 9324535622</span>
+                                </div>
+                                <div class="form-cell d7 m2-bottom">
+                                    <span id="email-header" class="detailer-info-header" title="Email">Email</span>
+                                    <span id="email-info" class="detailer-info" title="thomas.c@aus.af.mil">thomas.c@aus.af.mil</span>
+                                </div>
+                            </div>
+                            <h6><span>SECTION B (Project Info)</span></h6>
+                            <div class="detailer-section">
+                                <div class="form-cell half-width  d9">
+                                    <span id="project-name-header" class="detailer-info-header" title="Project Name">Project Name</span>
+                                    <span id="" class="detailer-info" title="FY20 RX Season">FY20 RX Season</span>
+                                </div>
+                                <div class="form-cell  d11">
+                                    <span id="" class="detailer-info-header" title="How many Detailers Req.">How many Detailers Req.</span>
+                                    <span id="" class="detailer-info" title="4">4</span>
+                                </div>
+                                <div class="form-cell  d12">
+                                    <span id="" class="detailer-info-header" title="Start Date">Start Date</span>
+                                    <span id="" class="detailer-info" title="11/01/2019">11/01/2019</span>
+                                </div>
+                                <div class="form-cell  d13">
+                                    <span id="" class="detailer-info-header" title="End Date">End Date</span>
+                                    <span id="" class="detailer-info" title="11/14/2019">11/14/2019</span>
+                                </div>
+                                <div class="form-cell  d14">
+                                    <span id="" class="detailer-info-header" title="Push to National Date">Push to National Date</span>
+                                    <span id="" class="detailer-info" title="11/22/2019">11/22/2019</span>
+                                </div>
+                            </div>
+                            <h6><span>SECTION C (Required Positions)</span></h6>
+
+                            <table>
+                                <tr>
+                                    <th>qualification</th>
+                                    <!-- <th>how many positions</th> -->
+                                    <th>trainee acceptable</th>
+                                </tr>
+                                <tr>
+                                    <td>fft2</td>
+                                    <!-- <td>4</td> -->
+                                    <td>no</td>
+                                </tr>
+                                <tr class="re">
+                                    <td>rxb1</td>
+                                    <!-- <td>3</td> -->
+                                    <td>yes</td>
+                                </tr>
+                            </table>
+
+                            <hr class="dashed-line">
+                            <div class="detailer-section bottom-info">
+                                <div class="form-cell full-width">
+                                    <span id="" class="detailer-info-header" title="">description</span>
+                                    <span id="" class="detailer-info" title="">
+                                        2020 Burn Season, APAFR,CCAFS,MAFB,HARB and NWCG-qualified firefighters located within installation
+                                        fire and emergency services and natural resources organizations will lend additional support, and will
+                                        be provided with training, support, certifications tracking and other services from the AFWFC.NWCG-qualified
+                                        firefighters located within installation fire and emergency services and natural resources organizations will
+                                        lend additional support, and will be provided with training, support, and other services from the AFWFC.
+                                    </span>
+                                </div>
+                                <div class="form-cell full-width">
+                                    <span id="" class="detailer-info-header" title="">equipment</span>
+                                    <span id="" class="detailer-info" title="">
+                                        2020 Burn Season, APAFR,CCAFS,MAFB,HARB and NWCG-qualified firefighters located within installation
+                                        fire and emergency services and natural resources organizations will lend additional support, and will
+                                        be provided with training, support, certifications tracking and other services from the AFWFC.NWCG-qualified
+                                        firefighters located within installation fire and emergency services and natural resources organizations will
+                                        lend additional support, and will be provided with training, support, and other services from the AFWFC.
+                                    </span>
+                                </div>
+                                <div class="form-cell full-width">
+                                    <span id="" class="detailer-info-header" title="">suggested personnel</span>
+                                    <span id="" class="detailer-info" title="">
+                                        2020 Burn Season, APAFR,CCAFS,MAFB,HARB and NWCG-qualified firefighters located within installation
+                                        fire and emergency services and natural resources organizations will lend additional support, and will
+                                        be provided with training, support, certifications tracking and other services from the AFWFC.NWCG-qualified
+                                        firefighters located within installation fire and emergency services and natural resources organizations will
+                                        lend additional support, and will be provided with training, support, and other services from the AFWFC.
+                                    </span>
+                                </div>
+                                <div class="form-cell full-width">
+                                    <span id="" class="detailer-info-header" title="">comments</span>
+                                    <span id="" class="detailer-info" title="">
+                                        2020 Burn Season, APAFR,CCAFS,MAFB,HARB and NWCG-qualified firefighters located within installation
+                                        fire and emergency services and natural resources organizations will lend additional support, and will
+                                        be provided with training, support, certifications tracking and other services from the AFWFC.NWCG-qualified
+                                        firefighters located within installation fire and emergency services and natural resources organizations will
+                                        lend additional support, and will be provided with training, support, and other services from the AFWFC.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!------------------------------------------DISCUSSION-------------------------------------------------------------->
+            <div class="right-side">
+                <div class="content-table">
+                    <div class="content-header discussion-header">
+                        <span title="discussion">discussions </span>
+                        <span id="discussion-number">(0)</span>
+                        <div class="header-buttons">
+                            <a href="#" onclick="addDiscussion()"><img class="img-15 icon-align" src="~/img/add.svg" alt="add icon"></a>
+                        </div>
+                    </div>
+                    <!----------------------------------------------ADD DISCUSSION------------------------------------------------------->
+                    <div id="add-discussion-panel" class="add-discussion">
+                        <div class="form-cell">
+                            <label for="subject">subject <span class="required">*</span></label>
+                            <input type="text" name="discussion subject" placeholder="enter subject" required>
+                        </div>
+                        <div class="form-cell">
+                            <label for="comment for">comment for (optional)</label>
+                            <select id="comment-for" name="comment-for">
+                                <option value="" disabled selected>Select</option>
+                                <option value="FAL2">none</option>
+                            </select>
+                        </div>
+                        <div class="form-cell">
+                            <label for="comment">comment</label>
+                            <textarea name="new-date-comment" id="new-date-textarea"></textarea>
+                        </div>
+                        <div class="tool-buttons add-detailer-bottom-button">
+                            <a class="tool-button approve-button"><img class="img-15" src="~/img/appproved.svg" alt="save-icon">OK</a>
+                            <a class="tool-button cancel"><img class="img-10" src="~/img/cancel.svg" alt="close-icon">cancel</a>
+                        </div>
+                    </div>
+
+
+                    <div class="full-content-wrapper">
+                        <div class="search-bar">
+                            <input type="text" name="search-bar" id="discussion-search-bar" placeholder="search">
+                            <img class="img-13" src="~/img/magnifying-glass.svg" alt="search-icon">
+                        </div>
+                        <div class="discussion">
+                            <div class="discussion-header">
+                                <span id="discussion1-title" class="discussion-title" title="discussion title">FY20 RX Season</span>
+                                <span id="discussion1-reply" class="reply-button" title="reply">reply</span>
+                                <span id="discussion1-title-reply-number" class="reply-button division" title="reply-number" onclick="displayReply()">1 reply<i class="fas fa-caret-up" id="reply-icon"></i></span>
+                            </div>
+                            <span id="discussion1-message" class="discussion-message" title="discussion message">
+                                NWCG-qualified firefighters located within
+                                installation fire and emergency services and natural resources organizations will lend additional support, and will be provided
+                                with training, support, certifications tracking and other services from the AFWFC.
+                            </span>
+                            <span id="discussion1-submitted-by" class="submit-info division" title="submitted by">By Test User</span>
+                            <span id="discussion1-submit-time" class="submit-info" title="submitted by">10/20/2019  05.35 PM</span>
+
+                            <div class="reply" id="dis-rep1">
+                                <span id="discussion1-message-reply" class="discussion-message" title="discussion message">
+                                    Local System Administrator/Terminal
+                                    Area Security Officers should inform their AFIMSC and the AFIMSC should inform AFAFO.
+                                </span>
+                                <span id="discussion1-submitted-by" class="submit-info division m-reply" title="submitted by">By Test User</span>
+                                <span id="discussion1-submit-time" class="submit-info m-reply" title="submitted by">10/20/2019  05.35 PM</span>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="discussion">
+                            <div class="discussion-header">
+                                <span id="discussion1-title" class="discussion-title" title="discussion title">Wild Land Fire Manual</span>
+                                <span id="discussion1-reply" class="reply-button" title="reply">reply</span>
+                            </div>
+                            <span id="discussion1-message" class="discussion-message" title="discussion message">
+                                The headquarters office at Eglin AFB,
+                                Florida, provides national oversight, operational risk management, policy development, corporate program management.
+                            </span>
+                            <span id="discussion1-submitted-by" class="submit-info division" title="submitted by">By Test User</span>
+                            <span id="discussion1-submit-time" class="submit-info" title="submitted by">10/20/2019  05.35 PM</span>
+                            <hr>
+                        </div>
+                        <div class="discussion">
+                            <div class="discussion-header">
+                                <span id="discussion1-title" class="discussion-title" title="discussion title">Location Map</span>
+                                <span id="discussion1-reply" class="reply-button" title="reply">reply</span>
+                            </div>
+                            <span id="discussion1-message" class="discussion-message" title="discussion message">
+                                The headquarters office at Eglin AFB, Florida,
+                                provides national oversight, operational risk management, policy development, corporate program management.
+                            </span>
+                            <span id="discussion1-submitted-by" class="submit-info division" title="submitted by">By Test User</span>
+                            <span id="discussion1-submit-time" class="submit-info" title="submitted by">10/20/2019  05.35 PM</span>
+                            <hr>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <script src="js/script.js"></script>
+</body>
+</html>

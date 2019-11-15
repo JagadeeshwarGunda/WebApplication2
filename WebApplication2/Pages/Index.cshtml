@@ -1,0 +1,279 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/ieStyle.css">
+    <script src="https://kit.fontawesome.com/7066b76c62.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" rel="stylesheet">
+    <title>AFWFB</title>
+</head>
+<body>
+    <!----------------------HEADER----------------------->
+    
+    <!----------------------------------MAP--------------------------------------------->
+
+    <div class="map">
+        <img src="~/img/map.svg" alt="map">
+    </div>
+    <div class="wrapper g1">
+        <div class="bottom-tables">
+            <!----------------------QUICK LINKS----------------------------->
+            <div class="content-table t1">
+                <div class="content-header">
+                    <img class="img-22" src="~/img/link.svg" alt="link icon">
+                    <span>Quick Links</span>
+                </div>
+                <!-- <img class="img-25" src="~/img/link.svg" alt="link icon">
+                    <span>quick-links</span>
+                </div> -->
+                <div class="content-wrapper home-page-table">
+                    <div class="row-wrapper">
+                        <a href="#" id="FMO-link" class="bottom-table-header" title="FMO">FMO</a>
+                        <hr>
+                    </div>
+                    <div class="row-wrapper">
+                        <span id="eDash-link" class="bottom-table-header" title="eDash AFWFB">
+                            eDash AFWFB</a>
+                            <hr>
+                    </div>
+                    <div class="row-wrapper">
+                        <a href="#" id="USFWS-link" class="bottom-table-header" title="USFWS">USFWS</a>
+                        <hr>
+                    </div>
+                    <div class="row-wrapper">
+                        <a href="#" id="BLM-link" class="bottom-table-header" title="BLM">BLM</a>
+                        <hr>
+                    </div>
+                    <div class="row-wrapper">
+                        <a href="#" id="IQCS-link" class="bottom-table-header" title="IQCS">IQCS</a>
+                        <hr>
+                    </div>
+                    <div class="row-wrapper">
+                        <a href="#" id="NWCG-link" class="bottom-table-header" title="NWCG">NWCG</a>
+                        <hr>
+                    </div>
+                    <div class="row-wrapper">
+                        <a href="#" id="NIFC-link" class="bottom-table-header" title="NIFC">NIFC</a>
+                        <hr>
+                    </div>
+                    <div class="row-wrapper">
+                        <a href="#" id="SAPR-link" class="bottom-table-header" title="SAPR">SAPR</a>
+                        <hr>
+                    </div>
+                    <div class="row-wrapper">
+                        <a href="#" id="FOIA-link" class="bottom-table-header" title="FOIA">FOIA</a>
+                        <hr>
+                    </div>
+                    <div class="row-wrapper">
+                        <a href="#" id="EEO-link" class="bottom-table-header" title="EEO">EEO</a>
+                        <hr>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- <table id="quick-links">
+                <tr><th><img src="~/img/link.svg" alt="link icon" style="width: 25px;">Quick Links</th></tr>
+                <tr><td>FMO</td></tr>
+                <tr><td>eDash AFWFB</td></tr>
+                <tr><td>USFWS</td></tr>
+                <tr><td>BLM</td></tr>
+                <tr><td>IQCS</td></tr>
+                <tr><td>NWCG</td></tr>
+                <tr><td>NIFC</td></tr>
+                <tr><td>SAPR</td></tr>
+                <tr><td>FOIA</td></tr>
+                <tr><td>EEO</td></tr>
+            </table> -->
+            <!----------------------EVENTS----------------------------->
+
+            <div class="content-table t2">
+                <div class="content-header">
+                    <img class="img-18" src="~/img/calendar.svg" alt="link icon">
+                    <span>Events</span>
+                </div>
+                <div class="content-wrapper home-page-table">
+                    <div class="row-wrapper">
+                        <a href="#" id="event0-link" class="bottom-table-header" title="Wild Land Fire Practicing Event">Wild Land Fire Practicing Event</a>
+                        <span id="vent0-info" class="event-info" title="">8/22/2019 02:00 PM to 08/25/2019 04:00 PM Location: Toronto, Canada</span>
+                        <hr>
+                    </div>
+                    <div class="row-wrapper">
+                        <a href="#" id="event1-link" class="bottom-table-header" title="National robot rodeo at JB Charleston promotes STEM and safety">National robot rodeo at JB Charleston promotes STEM and safety</a>
+                        <span id="event1-info" class="event-info" title="07/22/2019 05:00 PM to 07/25/2019 09:00 PM Location: Mexico City, Mexico">07/22/2019 05:00 PM to 07/25/2019 09:00 PM Location: Mexico City, Mexico</span>
+                        <hr>
+                    </div>
+                    <div class="row-wrapper">
+                        <a href="#" id="event2-link" class="bottom-table-header" title="AFCEC share status of military construction projects">AFCEC share status of military construction projects</a>
+                        <span id="event2-info" class="event-info" title="06/25/2019 04:00 PM to 07/02/2019 09:00 PM Venue: Gaithersburg, Maryland">06/25/2019 04:00 PM to 07/02/2019 09:00 PM Venue: Gaithersburg, Maryland</span>
+                        <hr>
+                    </div>
+                    <div class="row-wrapper">
+                        <a href="#" id="event3-link" class="bottom-table-header" title="Summits focus on partnerships, AF environmental restoration successes">Summits focus on partnerships, AF environmental restoration successes</a>
+                        <span id="event3-info" class="event-info" title="06/25/2019 04:00 PM to 07/02/2019 09:00 PM Venue: Gaithersburg, Marylan">06/25/2019 04:00 PM to 07/02/2019 09:00 PM Venue: Gaithersburg, Marylan</span>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- <table id="event">
+                    <tr><th><img src="~/img/link.svg" alt="link icon" style="width: 25px;">Events</th></tr>
+                        <tr>
+                            <td class="subhead">Wild Land Fire Practicing Event at </td>
+                            <td>8/22/2019 02:00 PM to 08/25/2019 04:00 PM Location: Toronto, Canada</td>
+                        </tr>
+                        <tr>
+                            <td class="subhead">National robot rodeo at JB Charleston promotes STEM and safety</td>
+                            <td>07/22/2019 05:00 PM to 07/25/2019 09:00 PM Location: Mexico City, Mexico</td>
+                        </tr>
+                        <tr>
+                            <td class="subhead">AFCEC share status of military construction projects</td>
+                            <td>06/25/2019 04:00 PM to 07/02/2019 09:00 PM Venue: Gaithersburg, Maryland</td>
+                        </tr>
+                        <tr>
+                            <td class="subhead">Summits focus on partnerships, AF environmental restoration successes</td>
+                            <td>06/25/2019 04:00 PM to 07/02/2019 09:00 PM Venue: Gaithersburg, Maryland</td>
+                        </tr>
+
+                </table> -->
+            <!----------------------TEMPLATES----------------------------->
+            <div class="content-table t3">
+                <div class="content-header">
+                    <img class="img-20" src="~/img/templets.svg" alt="link icon" style="width: 20px;">
+                    <span>Templetes</span>
+                </div>
+                <div class="content-wrapper home-page-table">
+                    <div class="row-wrapper">
+                        <a href="#" id="template1-link" class="bottom-table-header" title="Support Truck Vehicle Specification Templates">Support Truck Vehicle Specification Templates</a>
+                        <hr class="templete-hr">
+                    </div>
+                    <div class="row-wrapper">
+                        <a href="#" id="template2-link" class="bottom-table-header" title="Standard Reconciliation Register (Purchase Log)">Standard Reconciliation Register (Purchase Log)</a>
+                        <hr class="templete-hr">
+                    </div>
+                    <div class="row-wrapper">
+                        <a href="#" id="template3-link" class="bottom-table-header" title="New Equipmment Purchase request Form">New Equipmment Purchase request Form</a>
+                        <hr class="templete-hr">
+                    </div>
+                    <div class="row-wrapper">
+                        <a href="#" id="template4-link" class="bottom-table-header" title="Equipment Return Request form">Equipment Return Request form</a>
+                        <hr class="templete-hr">
+                    </div>
+                    <div class="row-wrapper">
+                        <a href="#" id="template5-link" class="bottom-table-header" title=">UTV/ATV Mods List Document">UTV/ATV Mods List Document</a>
+                        <hr class="templete-hr">
+                    </div>
+                    <div class="row-wrapper">
+                        <a href="#" id="template6-link" class="bottom-table-header" title="CLG 005 Purchase Card Online System (PCOLS)">CLG 005 Purchase Card Online System (PCOLS)</a>
+                        <hr class="templete-hr">
+                    </div>
+                    <div class="row-wrapper">
+                        <a href="#" id="template7-link" class="bottom-table-header" title="CLG 006 Certifying Officer Legislation Training">CLG 006 Certifying Officer Legislation Training</a>
+                        <hr class="templete-hr">
+                    </div>
+                    <div class="row-wrapper">
+                        <a href="#" id="template8-link" class="bottom-table-header" title="Equipment Return Request form">Equipment Return Request form</a>
+                        <hr class="templete-hr">
+                    </div>
+                    <div class="row-wrapper">
+                        <a href="#" id="template9-link" class="bottom-table-header" title="UTV/ATV Mods List Document">UTV/ATV Mods List Document</a>
+                        <hr class="templete-hr">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- <table id="temples">
+                    <tr><th><img src="~/img/link.svg" alt="link icon" style="width: 25px;">Templetes</th></tr>
+                    <tr><td>Support Truck Vehicle Specification Templates</td></tr>
+                    <tr><td>Standard Reconciliation Register (Purchase Log)</td></tr>
+                    <tr><td>New Equipmment Purchase request Form</td></tr>
+                    <tr><td>Equipment Return Request form</td></tr>
+                    <tr><td>UTV/ATV Mods List Document</td></tr>
+                    <tr><td>CLG 005 Purchase Card Online System (PCOLS)</td></tr>
+                    <tr><td>CLG 006 Certifying Officer Legislation Training </td></tr>
+                    <tr><td>Equipment Return Request form</td></tr>
+                    <tr><td>UTV/ATV Mods List Document</td></tr>
+                </table> -->
+            <!----------------------CONTACTS----------------------------->
+            <div class="content-table t4">
+                <div class="content-header">
+                    <img class="img-20" src="~/img/contact.svg" alt="link icon">
+                    <span>Contacs</span>
+                </div>
+                <div class="content-wrapper home-page-table">
+                    <div class="row-wrapper contacts">
+                        <span id="contact1-icon" class="team-member-icon contact-member" title="gj">gj</span>
+                        <span id="contact1-name" class="team-member-name" title="George johnson">George johnson</span>
+                        <span id="contact1-type" class="member-type" title="Module Leads">Module Leads</span>
+                        <a href="#" id="contact1-email" class="team-member-email contact-email" title="george.johnson@us.af.mil"><img class="img-15" src="~/img/envelope.svg" alt="email icon">george.johnson@us.af.mil</a>
+                        <a href="#" id="contact1-phone" class="team-member-phone" title="805-249-8796"><img class="img-15" src="~/img/call-answer.svg" alt="email icon">805-249-8796</a>
+                    </div>
+                    <div class="row-wrapper contacts">
+                        <span id="contact2-icon" class="team-member-icon contact-member" title="bs">bs</span>
+                        <span id="contact2-name" class="team-member-name" title="Blake Stewart">Blake Stewart</span>
+                        <span id="contact2-type" class="member-type" title="Module Assistant Leads">Module Assistant Leads</span>
+                        <a href="#" id="contact2-email" class="team-member-email contact-email" title="blake_stewart@us.af.mil"><img class="img-15" src="~/img/envelope.svg" alt="email icon">blake_stewart@us.af.mil</a>
+                        <a href="#" id="contact2-phone" class="team-member-phone" title="719-651-0669"><img class="img-15" src="~/img/call-answer.svg" alt="email icon">719-651-0669</a>
+                    </div>
+                    <div class="row-wrapper contacts">
+                        <span id="contact2-icon" class="team-member-icon contact-member" title="zw">zw</span>
+                        <span id="contact2-name" class="team-member-name" title="Zach Wood">Zach Wood</span>
+                        <span id="contact2-type" class="member-type" title="FMO">FMO</span>
+                        <a href="#" id="contact2-email" class="team-member-email contact-email" title="zachary.wood@us.af.mil"><img class="img-15" src="~/img/envelope.svg" alt="email icon">zachary.wood@us.af.mil</a>
+                        <a href="#" id="contact2-phone" class="team-member-phone" title="803-847-4491"><img class="img-15" src="~/img/call-answer.svg" alt="email icon">803-847-4491</a>
+                    </div>
+                    <div class="row-wrapper contacts">
+                        <span id="contact2-icon" class="team-member-icon contact-member" title="bw">bw</span>
+                        <span id="contact2-name" class="team-member-name" title="Brett Williams">Brett Williams</span>
+                        <span id="contact2-type" class="member-type" title="HQ Staff">HQ Staff</span>
+                        <a href="#" id="contact2-email" class="team-member-email contact-email" title="brett.williams.4@us.af.mil"><img class="img-15" src="~/img/envelope.svg" alt="email icon">brett.williams.4@us.af.mil</a>
+                        <a href="#" id="contact2-phone" class="team-member-phone" title="803-847-4491"><img class="img-15" src="~/img/call-answer.svg" alt="email icon">803-847-4491</a>
+                    </div>
+
+
+
+                    <!-- <table id="contacts">
+                            <tr><th><img src="~/img/link.svg" alt="link icon" style="width: 25px;">Contacs</th></tr>
+                            <tr>
+                                <td>Mark Nunez</td>
+                                <td>Module Leads</td>
+                                <td>mark.s.nunez@us.af.mil</td>
+                                <td>805-249-8796</td>
+                            </tr>
+                            <tr>
+                                <td>Blake Stewart</td>
+                                <td>Module Assistant Leads</td>
+                                <td>blake_stewart@us.af.mil</td>
+                                <td>719-651-0669</td>
+                            </tr>
+                            <tr>
+                                <td>Zach Wood</td>
+                                <td>FMO</td>
+                                <td>zachary.wood@us.af.mil</td>
+                                <td>803-847-4491</td>
+                            </tr>
+                            <tr>
+                                <td>Brett Williams</td>
+                                <td>HQ Staff</td>
+                                <td>brett.williams.4@us.af.mil</td>
+                                <td>803-847-4491</td>
+                            </tr>
+                        </table> -->
+                </div>
+            </div>
+            <script src="js/script.js"></script>
+</body>
+</html>

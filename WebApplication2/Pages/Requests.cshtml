@@ -1,0 +1,355 @@
+﻿@page
+@model RequestsModel
+@{
+    ViewData["Title"] = "Requests page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/ieStyle.css">
+    <script src="https://kit.fontawesome.com/7066b76c62.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" rel="stylesheet">
+    <title>Request</title>
+</head>
+<body>
+    <!-------------------------TABLE---------------------------->
+
+    <div class="wrapper">
+        <div class="content">
+            <div class="table-container">
+                <div class="detailer-table">
+                    <div class="table-content-tabs">
+                        <a id="purchase-request-tab" href="#">purchase requests <span>(0)</span></a>
+                        <a id="loan-request-tab" href="#">loan requests <span>(0)</span></a>
+                        <a id="detailer-request-tab" href="#" class="active-tab">detailer requests <span>(0)</span></a>
+                        <div class="tool-buttons request-buttons">
+                            <a id="detailer-copy" lass="tool-button" href="#"><img class="img-13 icon-align" src="~/img/copyv2.svg" alt="copy icon">copy</a>
+                            <a id="export-excel" href="#" class="export-button"><img class="img-20" src="~/img/export-icon.svg" alt="export icon">export to excel</a>
+                        </div>
+                    </div>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th id="all-checkbox" class="check-box-row"><input type="checkbox"></th>
+                                    <th title="request id">request id</th>
+                                    <th title="WSM">WSM</th>
+                                    <th title="installation">installation</th>
+                                    <th title="POC">POC</th>
+                                    <th title="start date">start date</th>
+                                    <th title="end date">end date</th>
+                                    <th title="detailers informatio">detailers information</th>
+                                    <th title="status">status</th>
+                                </tr>
+                            </thead>
+                            <tr class="table-cell">
+                                <td id="row1-checkbox" class="check-box-row"><input type="checkbox"></td>
+                                <td title="DTR-Req-1151"><a id="ro1-request-id" class="request-id" href="/detailer_detail">DTR-Req-1151</a></td>
+                                <td id="row1-wsm" title="shaw afb">shaw afb</td>
+                                <td id="row1-installation" title="jb charleston">jb charleston</td>
+                                <td id="row1-poc" title="thomas cline">thomas cline</td>
+                                <td id="row1-sd" title="10/04/2019">10/04/2019</td>
+                                <td id="row1-ed" title="10/29/2019">10/29/2019</td>
+                                <td id="ro1-info" title="3/4">3/4</td>
+                                <td id="ro1-status" class="detailer-status waiting-hq-status" title="">waiting for hq</td>
+                            <tr class="bottom-table-cell">
+                                <td></td>
+                                <td colspan="8">FY20 RX Season</td>
+                            </tr>
+                            </tr>
+                            <tr class="table-cell">
+                                <td id="row1-checkbox" class="check-box-row"><input type="checkbox"></td>
+                                <td title="DTR-Req-1151"><a id="ro1-request-id" class="request-id" href="#">DTR-Req-1151</a></td>
+                                <td id="row1-wsm" title="shaw afb">shaw afb</td>
+                                <td id="row1-installation" title="jb charleston">jb charleston</td>
+                                <td id="row1-poc" title="thomas cline">thomas cline</td>
+                                <td id="row1-sd" title="10/04/2019">10/04/2019</td>
+                                <td id="row1-ed" title="10/29/2019">10/29/2019</td>
+                                <td id="ro1-info" title="3/4">3/4</td>
+                                <td id="ro1-status" class="detailer-status waiting-hq-status" title="">waiting for hq</td>
+                            <tr class="bottom-table-cell">
+                                <td></td>
+                                <td colspan="8">FY20 RX Season</td>
+                            </tr>
+                            </tr>
+                            <tr class="table-cell">
+                                <td id="row1-checkbox" class="check-box-row"><input type="checkbox"></td>
+                                <td title="DTR-Req-1151"><a id="ro1-request-id" class="request-id" href="#">DTR-Req-1151</a></td>
+                                <td id="row1-wsm" title="shaw afb">shaw afb</td>
+                                <td id="row1-installation" title="jb charleston">jb charleston</td>
+                                <td id="row1-poc" title="thomas cline">thomas cline</td>
+                                <td id="row1-sd" title="10/04/2019">10/04/2019</td>
+                                <td id="row1-ed" title="10/29/2019">10/29/2019</td>
+                                <td id="ro1-info" title="3/4">3/4</td>
+                                <td id="ro1-status" class="detailer-status waiting-hq-status" title="">waiting for hq</td>
+                            <tr class="bottom-table-cell">
+                                <td></td>
+                                <td colspan="8">FY20 RX Season</td>
+                            </tr>
+                            </tr>
+                            <tr class="table-cell">
+                                <td id="row1-checkbox" class="check-box-row"><input type="checkbox"></td>
+                                <td title="DTR-Req-1151"><a id="ro1-request-id" class="request-id" href="#">DTR-Req-1151</a></td>
+                                <td id="row1-wsm" title="shaw afb">shaw afb</td>
+                                <td id="row1-installation" title="jb charleston">jb charleston</td>
+                                <td id="row1-poc" title="thomas cline">thomas cline</td>
+                                <td id="row1-sd" title="10/04/2019">10/04/2019</td>
+                                <td id="row1-ed" title="10/29/2019">10/29/2019</td>
+                                <td id="ro1-info" title="3/4">3/4</td>
+                                <td id="ro1-status" class="detailer-status filled-fmo-status" title="">waiting for hq</td>
+                            <tr class="bottom-table-cell">
+                                <td></td>
+                                <td colspan="8">FY20 RX Season</td>
+                            </tr>
+                            </tr>
+                            <tr class="table-cell">
+                                <td id="row1-checkbox" class="check-box-row"><input type="checkbox"></td>
+                                <td title="DTR-Req-1151"><a id="ro1-request-id" class="request-id" href="#">DTR-Req-1151</a></td>
+                                <td id="row1-wsm" title="shaw afb">shaw afb</td>
+                                <td id="row1-installation" title="jb charleston">jb charleston</td>
+                                <td id="row1-poc" title="thomas cline">thomas cline</td>
+                                <td id="row1-sd" title="10/04/2019">10/04/2019</td>
+                                <td id="row1-ed" title="10/29/2019">10/29/2019</td>
+                                <td id="ro1-info" title="3/4">3/4</td>
+                                <td id="ro1-status" class="detailer-status waiting-fmo-status" title="">waiting for hq</td>
+                            <tr class="bottom-table-cell">
+                                <td></td>
+                                <td colspan="8">FY20 RX Season</td>
+                            </tr>
+                            </tr>
+                            <tr class="table-cell">
+                                <td id="row1-checkbox" class="check-box-row"><input type="checkbox"></td>
+                                <td title="DTR-Req-1151"><a id="ro1-request-id" class="request-id" href="#">DTR-Req-1151</a></td>
+                                <td id="row1-wsm" title="shaw afb">shaw afb</td>
+                                <td id="row1-installation" title="jb charleston">jb charleston</td>
+                                <td id="row1-poc" title="thomas cline">thomas cline</td>
+                                <td id="row1-sd" title="10/04/2019">10/04/2019</td>
+                                <td id="row1-ed" title="10/29/2019">10/29/2019</td>
+                                <td id="ro1-info" title="3/4">3/4</td>
+                                <td id="ro1-status" class="detailer-status cancelled-status" title="">waiting for hq</td>
+                            <tr class="bottom-table-cell">
+                                <td></td>
+                                <td colspan="8">FY20 RX Season</td>
+                            </tr>
+                            </tr>
+                            <tr class="table-cell">
+                                <td id="row1-checkbox" class="check-box-row"><input type="checkbox"></td>
+                                <td title="DTR-Req-1151"><a id="ro1-request-id" class="request-id" href="#">DTR-Req-1151</a></td>
+                                <td id="row1-wsm" title="shaw afb">shaw afb</td>
+                                <td id="row1-installation" title="jb charleston">jb charleston</td>
+                                <td id="row1-poc" title="thomas cline">thomas cline</td>
+                                <td id="row1-sd" title="10/04/2019">10/04/2019</td>
+                                <td id="row1-ed" title="10/29/2019">10/29/2019</td>
+                                <td id="ro1-info" title="3/4">3/4</td>
+                                <td id="ro1-status" class="detailer-status waiting-laison-status" title="">waiting for hq</td>
+                            <tr class="bottom-table-cell">
+                                <td></td>
+                                <td colspan="8">FY20 RX Season</td>
+                            </tr>
+                            </tr>
+                            <tr class="table-cell">
+                                <td id="row1-checkbox" class="check-box-row"><input type="checkbox"></td>
+                                <td title="DTR-Req-1151"><a id="ro1-request-id" class="request-id" href="#">DTR-Req-1151</a></td>
+                                <td id="row1-wsm" title="shaw afb">shaw afb</td>
+                                <td id="row1-installation" title="jb charleston">jb charleston</td>
+                                <td id="row1-poc" title="thomas cline">thomas cline</td>
+                                <td id="row1-sd" title="10/04/2019">10/04/2019</td>
+                                <td id="row1-ed" title="10/29/2019">10/29/2019</td>
+                                <td id="ro1-info" title="3/4">3/4</td>
+                                <td id="ro1-status" class="detailer-status waiting-laison-status" title="">waiting for hq</td>
+                            <tr class="bottom-table-cell">
+                                <td></td>
+                                <td colspan="8">FY20 RX Season</td>
+                            </tr>
+                            </tr>
+                            <tr class="table-cell">
+                                <td id="row1-checkbox" class="check-box-row"><input type="checkbox"></td>
+                                <td title="DTR-Req-1151"><a id="ro1-request-id" class="request-id" href="#">DTR-Req-1151</a></td>
+                                <td id="row1-wsm" title="shaw afb">shaw afb</td>
+                                <td id="row1-installation" title="jb charleston">jb charleston</td>
+                                <td id="row1-poc" title="thomas cline">thomas cline</td>
+                                <td id="row1-sd" title="10/04/2019">10/04/2019</td>
+                                <td id="row1-ed" title="10/29/2019">10/29/2019</td>
+                                <td id="ro1-info" title="3/4">3/4</td>
+                                <td id="ro1-status" class="detailer-status unfilled-status" title="">waiting for hq</td>
+                            <tr class="bottom-table-cell">
+                                <td></td>
+                                <td colspan="8">FY20 RX Season</td>
+                            </tr>
+                            </tr>
+                            <tr class="table-cell">
+                                <td id="row1-checkbox" class="check-box-row"><input type="checkbox"></td>
+                                <td title="DTR-Req-1151"><a id="ro1-request-id" class="request-id" href="#">DTR-Req-1151</a></td>
+                                <td id="row1-wsm" title="shaw afb">shaw afb</td>
+                                <td id="row1-installation" title="jb charleston">jb charleston</td>
+                                <td id="row1-poc" title="thomas cline">thomas cline</td>
+                                <td id="row1-sd" title="10/04/2019">10/04/2019</td>
+                                <td id="row1-ed" title="10/29/2019">10/29/2019</td>
+                                <td id="ro1-info" title="3/4">3/4</td>
+                                <td id="ro1-status" class="detailer-status unfilled-status" title="">waiting for hq</td>
+                            <tr class="bottom-table-cell">
+                                <td></td>
+                                <td colspan="8">FY20 RX Season</td>
+                            </tr>
+                            </tr>
+                            <tr class="table-cell">
+                                <td id="row1-checkbox" class="check-box-row"><input type="checkbox"></td>
+                                <td title="DTR-Req-1151"><a id="ro1-request-id" class="request-id" href="#">DTR-Req-1151</a></td>
+                                <td id="row1-wsm" title="shaw afb">shaw afb</td>
+                                <td id="row1-installation" title="jb charleston">jb charleston</td>
+                                <td id="row1-poc" title="thomas cline">thomas cline</td>
+                                <td id="row1-sd" title="10/04/2019">10/04/2019</td>
+                                <td id="row1-ed" title="10/29/2019">10/29/2019</td>
+                                <td id="ro1-info" title="3/4">3/4</td>
+                                <td id="ro1-status" class="detailer-status unfilled-status" title="">waiting for hq</td>
+                            <tr class="bottom-table-cell">
+                                <td></td>
+                                <td colspan="8">FY20 RX Season</td>
+                            </tr>
+                            </tr>
+                            <tr class="table-cell">
+                                <td id="row1-checkbox" class="check-box-row"><input type="checkbox"></td>
+                                <td title="DTR-Req-1151"><a id="ro1-request-id" class="request-id" href="#">DTR-Req-1151</a></td>
+                                <td id="row1-wsm" title="shaw afb">shaw afb</td>
+                                <td id="row1-installation" title="jb charleston">jb charleston</td>
+                                <td id="row1-poc" title="thomas cline">thomas cline</td>
+                                <td id="row1-sd" title="10/04/2019">10/04/2019</td>
+                                <td id="row1-ed" title="10/29/2019">10/29/2019</td>
+                                <td id="ro1-info" title="3/4">3/4</td>
+                                <td id="ro1-status" class="detailer-status unfilled-status" title="">waiting for hq</td>
+                            <tr class="bottom-table-cell">
+                                <td></td>
+                                <td colspan="8">FY20 RX Season</td>
+                            </tr>
+                            </tr>
+                            <tr class="table-cell">
+                                <td id="row1-checkbox" class="check-box-row"><input type="checkbox"></td>
+                                <td title="DTR-Req-1151"><a id="ro1-request-id" class="request-id" href="#">DTR-Req-1151</a></td>
+                                <td id="row1-wsm" title="shaw afb">shaw afb</td>
+                                <td id="row1-installation" title="jb charleston">jb charleston</td>
+                                <td id="row1-poc" title="thomas cline">thomas cline</td>
+                                <td id="row1-sd" title="10/04/2019">10/04/2019</td>
+                                <td id="row1-ed" title="10/29/2019">10/29/2019</td>
+                                <td id="ro1-info" title="3/4">3/4</td>
+                                <td id="ro1-status" class="detailer-status unfilled-status" title="">waiting for hq</td>
+                            <tr class="bottom-table-cell">
+                                <td></td>
+                                <td colspan="8">FY20 RX Season</td>
+                            </tr>
+                            </tr>
+                            <tr class="table-cell">
+                                <td id="row1-checkbox" class="check-box-row"><input type="checkbox"></td>
+                                <td title="DTR-Req-1151"><a id="ro1-request-id" class="request-id" href="#">DTR-Req-1151</a></td>
+                                <td id="row1-wsm" title="shaw afb">shaw afb</td>
+                                <td id="row1-installation" title="jb charleston">jb charleston</td>
+                                <td id="row1-poc" title="thomas cline">thomas cline</td>
+                                <td id="row1-sd" title="10/04/2019">10/04/2019</td>
+                                <td id="row1-ed" title="10/29/2019">10/29/2019</td>
+                                <td id="ro1-info" title="3/4">3/4</td>
+                                <td id="ro1-status" class="detailer-status filled-laison-status" title="">waiting for hq</td>
+                            <tr class="bottom-table-cell">
+                                <td></td>
+                                <td colspan="8">FY20 RX Season</td>
+                            </tr>
+                            </tr>
+                            <tr class="table-cell">
+                                <td id="row1-checkbox" class="check-box-row"><input type="checkbox"></td>
+                                <td title="DTR-Req-1151"><a id="ro1-request-id" class="request-id" href="#">DTR-Req-1151</a></td>
+                                <td id="row1-wsm" title="shaw afb">shaw afb</td>
+                                <td id="row1-installation" title="jb charleston">jb charleston</td>
+                                <td id="row1-poc" title="thomas cline">thomas cline</td>
+                                <td id="row1-sd" title="10/04/2019">10/04/2019</td>
+                                <td id="row1-ed" title="10/29/2019">10/29/2019</td>
+                                <td id="ro1-info" title="3/4">3/4</td>
+                                <td id="ro1-status" class="detailer-status unfilled-status" title="">waiting for hq</td>
+                            <tr class="bottom-table-cell">
+                                <td></td>
+                                <td colspan="8">FY20 RX Season</td>
+                            </tr>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-container">
+                <div class="filter">
+                    <div class="content-table">
+                        <div class="content-header filter-text">
+                            <img class="img-15 baseline-icon" src="~/img/filter.svg" alt="filter icon">
+                            <span class="filter-header" title="document">filter by</span>
+                            <div class="header-buttons">
+                                <span id="clear-button" class="heater-clear">clear</span>
+                                <i class="fas fa-chevron-down fa-bars filter-drop-down" id="filter-drop-down" onclick="displayFilter()"></i>
+                            </div>
+                        </div>
+
+                        <div id="mob-filter" class="content-wrapper filter-wrapper">
+                            <div class="search-bar">
+                                <input type="text" name="search-bar" id="discussion-search-bar" placeholder="search by request ID">
+                                <img class="img-13" src="~/img/magnifying-glass.svg" alt="search-icon">
+                            </div>
+                            <div class="select-filter">
+                                <div>
+                                    <label for="fiscal year">fiscal year</label>
+                                    <select id="filter-fiscal-year" name="fiscal-year">
+                                        <option value="2020" selected>2020</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="fiscal year">start date</label>
+                                    <input id="filter-start-date" type="date" name="start-date" placeholder="MM/DD/YYYY">
+                                </div>
+                                <div>
+                                    <label for="fiscal year">end date</label>
+                                    <input id="filter-end-date" type="date" name="end-date" placeholder="MM/DD/YYYY">
+                                </div>
+                                <div>
+                                    <label for="fiscal year">WSM</label>
+                                    <select id="filter-fiscal-year" name="fiscal-year">
+                                        <option value="2020" selected>select</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="fiscal year">installation</label>
+                                    <select id="filter-fiscal-year" name="fiscal-year">
+                                        <option value="2020" selected>select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- <div class="total-request">
+                                <a id="total-button" class="" href="#">
+                                    <span>total request</span>
+                                    <span id="total-request-number" >00</span>
+                                </a>
+                            </div> -->
+                            <div class="filter-button">
+                                <!-- <div class="total-request">
+                                    <a id="total-button" href="">total request</a>
+                                    <a id="total-request-number" class="total-request-text"  href="">00</a>
+                                </div> -->
+                                <a id="total-request-button" class="total-request" href="#"><span id="total-button">total request</span><span class="total-request-text" id="total-request-number">00</span></a>
+                                <a id="waiting-fmo-button" href="#"><span id="wfmo-total">00</span><span>waiting for fmo</span></a>
+                                <a class="re" id="filled-fmo-button" href="#"><span id="ffmo-total">00</span><span id="ffmo-total-percentaage">filled by fmo</span><span>(100%)</span></a>
+                                <a id="waiting-laison-button" href="#"><span id="wl-total">00</span><span>waiting for laison</span></a>
+                                <a id="filled-laison-button" href="#"><span id="fl-total">00</span><span>filled by laison</span></a>
+                                <a id="unfilled-button" href="#"><span id="u-total">00</span><span>unfilled</span></a>
+                                <a id="waiting-hq-button" href="#"><span id="whq-total">00</span><span>waiting for hq</span></a>
+                                <a id="modified-button" href="#"><span id="c-total">00</span><span>modified dates</span></a>
+                                <a id="cancel-button" href="#"><span id="c-total">00</span><span>cancelled</span></a>
+                                <a id="saved-button" href="#"><span id="md-total">00</span><span>saved</span></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication2</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/ieStyle.css">
+    <script src="https://kit.fontawesome.com/7066b76c62.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <img id="logo" src="~/img/afwfb-logo.svg" alt="AFWFB-logo">
+            <span id="top-text-logo">AFWFB</span>
+            <span id="bottom-text-logo">Inventory Management System</span>
+        </header>
+    </div>
+    <!-------------------------NAVEGATION---------------------------->
+
+    <nav>
+        <ul>
+            <li class="hamberger-icon" id="ham-mobile" onclick="displayMobileMenu()"><a href="#"><i class="fas fa-bars"></i></a></li>
+            <li class="mobile-settings"><a href="#"><i class="fas fa-cog"></i></a></li>
+            <div class="mob-menu" id="mob-dropdown-menu">
+                <li class="active"><a href="/Index">HOME</a></li>
+                <li><a href="#">INVENTORY</a></li>
+                <li><a href="#">MAINTENANCE</a></li>
+                <li><a href="/Requests">REQUEST</a></li>
+                <li>
+                    <a class="create-button" href="#">CREATE<i class="fas fa-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="#">PURCHASE REQUEST</a></li>
+                        <li><a href="#">LOAN REQUEST</a></li>
+                        <li><a href="#">NEW INVENTORY</a></li>
+                        <li><a href="/detailer_form">NEW DETAILER NEED</a></li>
+                    </ul>
+                </li>
+                <li class="settings-button"><a href="#"><i class="fas fa-cog"></i>SETTINGS</a></li>
+            </div>
+        </ul>
+    </nav>
+    <div>
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+  
+
+    <script src="js/script.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
